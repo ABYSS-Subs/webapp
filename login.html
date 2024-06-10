@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABYSS - Login</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preload stylesheet" href="fonts.css" as="style">
+</head>
+
+<body>
+    <!-- Mobile Login Container -->
+    <div class="login-container-desktop login-container bg-material/30 border border-zinc-800 col-span-4 flex flex-col grid12ok:col-span-8 grid35ok:col-span-5 items-center justify-center lg:mt-0 p-4 rounded-3xl sm:p-8 sm:text-base text-left text-sm w-auto shadow-md overflow-hidden w-full md:w-1/2 lg:w-1/3">
+        <svg class="img_svg_head_bttm" style="align-self: center;" width="100" height="100" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 180L100 140L80 140L80 150L70 150L70 160L60 160L60 140L40 140L40 100L60 100L60 80L70 80L70 70L80 70L80 80L100 80L100 60L120 60L120 80L140 80L140 70L150 70L150 80L160 80L160 100L140 100L140 140L160 140L160 160L150 160L150 150L140 150L140 140L100 140Z" fill="white" />
+            <path d="M100 10L100 40L120 40L120 30L140 30L140 20L160 20L160 30L140 30L140 40L160 40L160 60L140 60L140 50L120 50L120 60L100 60L100 40Z" fill="white" />
+            <path d="M180 100L160 100L160 110L150 110L150 120L140 120L140 110L130 110L130 100L140 100L140 90L150 90L150 80L160 80L160 90L170 90L170 100L180 100Z" fill="white" />
+            <path d="M10 100L30 100L30 90L20 90L20 80L10 80L10 90L0 90L0 100L10 100Z" fill="white" />
+            <path d="M100 180L100 160L110 160L110 170L100 170L100 180Z" fill="white" />
+        </svg>
+        <h3 class="font-bold text-white glow-impact" style="font-size: x-large !important; margin-bottom: 20px;">Welcome Back</h3>
+        <form id="login-form-mobile" method="POST">
+            <input class=" border border-zinc-700" type="text" name="email" placeholder="Email Address">
+            <input class=" border border-zinc-700" type="password" name="password" placeholder="Password">
+            <button class="backdrop-blur-md bg-material/50 border border-side-reg-400/60 flex px-3 py-1 shadow-[inset_0_-7px_11px_#a48fff1f] text-[0.92rem] text-white w-max" type="submit" name="login">Login</button>
+        </form>
+        <p>By Signing In You Agree To Our <a href="legal/tos.html"><ph style="font-weight: bold;">Terms Of Service</ph></a></p>
+    </div>
+
+    <!-- Desktop Login Container -->
+    <div class="login-container login-container-mobile">
+        <svg class=" img_svg_head_bttm" style="align-self: center;" width="100" height="100" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 180L100 140L80 140L80 150L70 150L70 160L60 160L60 140L40 140L40 100L60 100L60 80L70 80L70 70L80 70L80 80L100 80L100 60L120 60L120 80L140 80L140 70L150 70L150 80L160 80L160 100L140 100L140 140L160 140L160 160L150 160L150 150L140 150L140 140L100 140Z" fill="white" />
+            <path d="M100 10L100 40L120 40L120 30L140 30L140 20L160 20L160 30L140 30L140 40L160 40L160 60L140 60L140 50L120 50L120 60L100 60L100 40Z" fill="white" />
+            <path d="M180 100L160 100L160 110L150 110L150 120L140 120L140 110L130 110L130 100L140 100L140 90L150 90L150 80L160 80L160 90L170 90L170 100L180 100Z" fill="white" />
+            <path d="M10 100L30 100L30 90L20 90L20 80L10 80L10 90L0 90L0 100L10 100Z" fill="white" />
+            <path d="M100 180L100 160L110 160L110 170L100 170L100 180Z" fill="white" />
+        </svg>
+        <h3 class="font-bold text-white glow-impact" style="font-size: x-large !important; margin-bottom: 20px;">Welcome Back</h3>
+        <form id="login-form-desktop" method="POST">
+            <input class="border border-zinc-800 flex font-medium hover:bg-material hover:border-zinc-700 items-center justify-center px-7 py-2.5 rounded-full text-white transition-colors" type="email" name="email" id="email" placeholder="Email Address">
+            <input class="border border-zinc-800 flex font-medium hover:bg-material hover:border-zinc-700 items-center justify-center px-7 py-2.5 rounded-full text-white transition-colors" type="password" name="password" id="password" placeholder="Password">
+            <button class="backdrop-blur-md bg-material/50 border border-side-reg-400/60 flex px-3 py-1 shadow-[inset_0_-7px_11px_#a48fff1f] text-[0.92rem] text-white w-max" type="submit" id="login" name="login">Login</button>
+        </form>
+        <p style="margin-top: 30px; font-size: 13px;">By <ph class="font-bold">Signing In</ph> You Agree To Our</p>
+        <a class="backdrop-blur-md bg-material/50 border border-side-reg-400/60 flex px-3 py-1 shadow-[inset_0_-7px_11px_#a48fff1f] text-[0.92rem] text-white w-max rounded-full" style="margin-top: 10px; cursor: pointer;" href="legal/tos.html">Terms of Service</a>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+      import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+  
+      const firebaseConfig = {
+          apiKey: "AIzaSyBNC0VAjMUFDEQ2nCtUoSV1J2Oep9KmJes",
+          authDomain: "abyss-subs.firebaseapp.com",
+          projectId: "abyss-subs",
+          storageBucket: "abyss-subs.appspot.com",
+          messagingSenderId: "62685634596",
+          appId: "1:62685634596:web:2acfbd9fead0126a6078b1",
+          measurementId: "G-2B5HZJHL8P"
+      };
+
+      const customErrorMessages = {
+    'auth/missing-password':'<p style="margin-top: 10px; color: white; font-size: large; font-weight: 600;">Did you forget your password? Try typing it in the "Password" box</p>',
+    'auth/invalid-login-credentials': '<p style="margin-top: 10px; color: white; font-size: large; font-weight: 600;">Your login credentials are invalid. Please check your email and password and try again.</p>',
+    'auth/invalid-email': '<p style="margin-top: 10px; color: white; font-size: large; font-weight: 600;">That email is invalid.</p>',
+    // Add more custom messages for other error codes here
+};
+
+const checkWindowWidth = () => {
+    const windowWidth = window.innerWidth;
+    const mobileLoginContainer = document.querySelector('.login-container-desktop');
+    const desktopLoginContainer = document.querySelector('.login-container-mobile');
+
+    if (windowWidth > 650) {
+        desktopLoginContainer.style.display = 'none';
+        mobileLoginContainer.style.display = 'flex';
+    } else {
+        desktopLoginContainer.style.display = 'block';
+        mobileLoginContainer.style.display = 'none';
+    }
+};
+
+// Initial check when the page loads
+checkWindowWidth();
+
+// Event listener for window resize
+window.addEventListener('resize', checkWindowWidth);
+
+const customAlert = (message) => {
+    const alertContainer = document.createElement('div');
+    alertContainer.classList.add('custom-alert');
+
+    const title = document.createElement('h1');
+    title.innerHTML =  '<h3 class="font-bold text-white" style="font-size: x-large !important; margin-bottom: 20px;">Error!</h3>';
+    alertContainer.appendChild(title);
+
+    const alertMessage = document.createElement('p');
+    alertMessage.innerHTML =  message;
+    alertContainer.appendChild(alertMessage);
+
+    const dismissButton = document.createElement('button');
+    dismissButton.innerHTML = '<div title="Close"  class="duration-100 flex h-6 hover:text-white justify-center text-zinc-300 transition-colors w-6"><span class="material-symbols-outlined">close</span></div>'; // Use the material icon for "clear"
+    dismissButton.classList.add('dismiss-button');
+    dismissButton.addEventListener('click', () => {
+        alertContainer.remove();
+    });
+    alertContainer.appendChild(dismissButton);
+
+   
+
+    document.body.appendChild(alertContainer);
+};
+
+
+      
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth();
+  
+      const loginFormMobile = document.getElementById("login-form-mobile");
+      const loginFormDesktop = document.getElementById("login-form-desktop");
+  
+      const handleLogin = (event, form) => {
+          event.preventDefault();
+          console.log("Login form submitted"); // Debugging statement
+          const email = form["email"].value;
+          const password = form["password"].value;
+          console.log("Email:", email); // Debugging statement
+          console.log("Password:", password); // Debugging statement
+          signInWithEmailAndPassword(auth, email, password)
+              .then((userCredential) => {
+                  const user = userCredential.user;
+                  console.log("User signed in:", user);
+                  sessionStorage.setItem("pageRedirect", "L0L");
+                  const currentDate = new Date();
+                  const futureDate = new Date();
+                  futureDate.setDate(currentDate.getDate() + 7);
+                  const cookieDate = futureDate.toUTCString();
+                  sessionStorage.setItem("isLoggedIn", "true");
+                  sessionStorage.setItem("uid", user.uid);
+                  document.cookie = "isLoggedIn=true; uid=" + user.uid + "; expires=" + cookieDate + "; secure; path=/";
+                  const pageRedirect = sessionStorage.getItem("pageRedirect");
+                  if (pageRedirect && pageRedirect.includes('L0L')) {
+                      window.location.href = "you.html";
+                  } else {
+                      window.location.href = "you.html";
+                      sessionStorage.setItem("pageRedirect", "");
+                  }
+              })
+              .catch((error) => {
+                const errorCode = error.code;
+            const errorMessage = customErrorMessages[errorCode] || error.message;
+            console.log("Error code:", errorCode);
+            console.log("Error message:", errorMessage);
+            customAlert(errorMessage); // Display custom error alert
+        });
+      };
+  
+      if (loginFormMobile) {
+          loginFormMobile.addEventListener("submit", (event) => handleLogin(event, loginFormMobile));
+      }
+  
+      if (loginFormDesktop) {
+          loginFormDesktop.addEventListener("submit", (event) => handleLogin(event, loginFormDesktop));
+      }
+  
+      console.log("Scripts loaded and event listeners added."); // Debugging statement
+  </script>
+  
+</body>
+
+</html>

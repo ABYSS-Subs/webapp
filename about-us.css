@@ -1,0 +1,53 @@
+.glow-impact {
+    font-weight: 800;
+    text-shadow: 0 0 50px #6BE8E1;
+
+  }
+
+  .img_svg_head_bttm_cont {
+    margin-top: 50px;
+}
+
+
+
+@-webkit-keyframes Gradient1 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient1 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient1 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
